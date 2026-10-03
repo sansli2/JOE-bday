@@ -10,87 +10,66 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* ==================================================
-       OPEN ARCHIVE
+        OPEN ARCHIVE
     ================================================== */
 
-    beginBtn.addEventListener("click", () => {
-
-        opening.classList.add("hidden");
-
-        archive.classList.remove("hidden");
-
-        showPage("intro");
-
-    });
+    if (beginBtn) {
+        beginBtn.addEventListener("click", () => {
+            if (opening) opening.classList.add("hidden");
+            if (archive) archive.classList.remove("hidden");
+            showPage("intro");
+        });
+    }
 
 
     /* ==================================================
-       PAGE NAVIGATION
+        PAGE NAVIGATION
     ================================================== */
 
     function showPage(id) {
-
-        const pages =
-            document.querySelectorAll(".archive-page");
+        const pages = document.querySelectorAll(".archive-page");
 
         pages.forEach(page => {
             page.classList.add("hidden");
         });
 
-
-        const page =
-            document.getElementById(id);
-
+        const page = document.getElementById(id);
 
         if (page) {
-
             page.classList.remove("hidden");
 
             window.scrollTo({
                 top: 0,
                 behavior: "smooth"
             });
-
         }
-
     }
 
 
     /* ==================================================
-       NORMAL NEXT BUTTONS
+        NORMAL NEXT BUTTONS
     ================================================== */
 
     document.querySelectorAll(".next-btn").forEach(button => {
-
         button.addEventListener("click", () => {
-
-            const nextPage =
-                button.dataset.next;
-
+            const nextPage = button.dataset.next;
             showPage(nextPage);
-
         });
-
     });
 
 
     /* ==================================================
-       A PUZZLE
+        A PUZZLE
 
-       Correct order:
-       Grade 12
-       → Entrance Exam / Dorm
-       → Same University
+        Correct order:
+        Grade 12
+        → Entrance Exam / Dorm
+        → Same University
     ================================================== */
 
-    const aButtons =
-        document.querySelectorAll("#aPuzzle button");
-
-    const aMessage =
-        document.getElementById("aMessage");
-
-    const aReward =
-        document.getElementById("aReward");
+    const aButtons = document.querySelectorAll("#aPuzzle button");
+    const aMessage = document.getElementById("aMessage");
+    const aReward = document.getElementById("aReward");
 
     const aCorrectOrder = [
         "grade",
@@ -100,75 +79,46 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let aStep = 0;
 
-
     aButtons.forEach(button => {
-
         button.addEventListener("click", () => {
-
-            const answer =
-                button.dataset.answer;
-
+            const answer = button.dataset.answer;
 
             if (answer === aCorrectOrder[aStep]) {
-
                 button.classList.add("selected");
-
                 aStep++;
 
-
                 if (aStep === aCorrectOrder.length) {
-
-                    aMessage.textContent =
-                        "✓ The sequence is correct. Archive A recovered.";
-
-                    aReward.classList.remove("hidden");
-
+                    if (aMessage) aMessage.textContent = "✓ The sequence is correct. Archive A recovered.";
+                    if (aReward) aReward.classList.remove("hidden");
                 } else {
-
-                    aMessage.textContent =
-                        "✓ Correct. Continue the timeline.";
-
+                    if (aMessage) aMessage.textContent = "✓ Correct. Continue the timeline.";
                 }
-
-
             } else {
-
-                aMessage.textContent =
-                    "✕ That isn't the next event. Try again.";
-
+                if (aMessage) aMessage.textContent = "✕ That isn't the next event. Try again.";
                 aStep = 0;
-
 
                 aButtons.forEach(btn => {
                     btn.classList.remove("selected");
                 });
-
             }
-
         });
-
     });
 
 
     /* ==================================================
-       R PUZZLE
+        R PUZZLE
 
-       Correct order:
-       Qoqor
-       → Unisa
-       → Nowhere
-       → Sambusa
-       → Rainy Night
+        Correct order:
+        Qoqor
+        → Unisa
+        → Nowhere
+        → Sambusa
+        → Rainy Night
     ================================================== */
 
-    const rButtons =
-        document.querySelectorAll("#rPuzzle button");
-
-    const rMessage =
-        document.getElementById("rMessage");
-
-    const rReward =
-        document.getElementById("rReward");
+    const rButtons = document.querySelectorAll("#rPuzzle button");
+    const rMessage = document.getElementById("rMessage");
+    const rReward = document.getElementById("rReward");
 
     const rCorrectOrder = [
         "qoqor",
@@ -180,104 +130,62 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let rStep = 0;
 
-
     rButtons.forEach(button => {
-
         button.addEventListener("click", () => {
-
-            const answer =
-                button.dataset.answer;
-
+            const answer = button.dataset.answer;
 
             if (answer === rCorrectOrder[rStep]) {
-
                 button.classList.add("selected");
-
                 rStep++;
-               if (rStep === rCorrectOrder.length) {
 
-                    rMessage.textContent =
-                        "✓ Journey reconstructed. Archive R recovered.";
-
-                    rReward.classList.remove("hidden");
-
+                if (rStep === rCorrectOrder.length) {
+                    if (rMessage) rMessage.textContent = "✓ Journey reconstructed. Archive R recovered.";
+                    if (rReward) rReward.classList.remove("hidden");
                 } else {
-
-                    rMessage.textContent =
-                        "✓ Correct. Follow the journey.";
-
+                    if (rMessage) rMessage.textContent = "✓ Correct. Follow the journey.";
                 }
-
-
             } else {
-
-                rMessage.textContent =
-                    "✕ Wrong path. Start the journey again.";
-
+                if (rMessage) rMessage.textContent = "✕ Wrong path. Start the journey again.";
                 rStep = 0;
-
 
                 rButtons.forEach(btn => {
                     btn.classList.remove("selected");
                 });
-
             }
-
         });
-
     });
 
 
     /* ==================================================
-       S REVEAL
+        S REVEAL
     ================================================== */
 
-    const sRevealBtn =
-        document.getElementById("sRevealBtn");
+    const sRevealBtn = document.getElementById("sRevealBtn");
+    const sReward = document.getElementById("sReward");
+    const sMessage = document.getElementById("sMessage");
 
-    const sReward =
-        document.getElementById("sReward");
+    if (sRevealBtn) {
+        sRevealBtn.addEventListener("click", () => {
+            if (sMessage) sMessage.textContent = "✓ Personality file verified. Archive S recovered.";
+            if (sReward) sReward.classList.remove("hidden");
 
-    const sMessage =
-        document.getElementById("sMessage");
-
-
-    sRevealBtn.addEventListener("click", () => {
-
-        sMessage.textContent =
-            "✓ Personality file verified. Archive S recovered.";
-
-        sReward.classList.remove("hidden");
-
-        sRevealBtn.disabled = true;
-
-        sRevealBtn.style.opacity = "0.5";
-
-    });
+            sRevealBtn.disabled = true;
+            sRevealBtn.style.opacity = "0.5";
+        });
+    }
 
 
     /* ==================================================
-       U — CHOOSE EXACTLY 3
+        U — CHOOSE EXACTLY 3
     ================================================== */
 
-    const choices =
-        document.querySelectorAll("#uChoices button");
-
-    const counter =
-        document.getElementById("uCounter");
-
-    const confirmBtn =
-        document.getElementById("uConfirm");
-
-    const uMessage =
-        document.getElementById("uMessage");
-
-    const uReward =
-        document.getElementById("uReward");
-
+    const choices = document.querySelectorAll("#uChoices button");
+    const counter = document.getElementById("uCounter");
+    const confirmBtn = document.getElementById("uConfirm");
+    const uMessage = document.getElementById("uMessage");
+    const uReward = document.getElementById("uReward");
 
     let selectedChoices = [];
-
 
     const correctChoices = [
         "food",
@@ -285,111 +193,68 @@ document.addEventListener("DOMContentLoaded", () => {
         "travel"
     ];
 
-
     choices.forEach(button => {
-
         button.addEventListener("click", () => {
-
-            const choice =
-                button.dataset.choice;
-
+            const choice = button.dataset.choice;
 
             if (selectedChoices.includes(choice)) {
-
-                selectedChoices =
-                    selectedChoices.filter(
-                        item => item !== choice
-                    );
-
+                selectedChoices = selectedChoices.filter(
+                    item => item !== choice
+                );
                 button.classList.remove("selected");
-
-
             } else {
-
                 if (selectedChoices.length >= 3) {
-
-                    uMessage.textContent =
-                        "Choose only three.";
-
+                    if (uMessage) uMessage.textContent = "Choose only three.";
                     return;
                 }
 
-
                 selectedChoices.push(choice);
-
                 button.classList.add("selected");
-
             }
 
-
-            counter.textContent =
-                ${selectedChoices.length} / 3 selected;
-
-            uMessage.textContent = "";
-
+            if (counter) counter.textContent = `${selectedChoices.length} / 3 selected`;
+            if (uMessage) uMessage.textContent = "";
         });
-
     });
 
+    if (confirmBtn) {
+        confirmBtn.addEventListener("click", () => {
+            if (selectedChoices.length !== 3) {
+                if (uMessage) uMessage.textContent = "Choose exactly three things first.";
+                return;
+            }
 
-    confirmBtn.addEventListener("click", () => {
-
-        if (selectedChoices.length !== 3) {
-
-            uMessage.textContent =
-                "Choose exactly three things first.";
-
-            return;
-
-        }
-
-
-        const isCorrect =
-            correctChoices.every(
-                choice =>
-                    selectedChoices.includes(choice)
+            const isCorrect = correctChoices.every(
+                choice => selectedChoices.includes(choice)
             );
 
+            if (isCorrect) {
+                if (uMessage) uMessage.textContent = "✓ The final memory has been recovered.";
+                if (uReward) uReward.classList.remove("hidden");
 
-        if (isCorrect) {
+                confirmBtn.disabled = true;
+                confirmBtn.style.opacity = "0.5";
 
-            uMessage.textContent =
-                "✓ The final memory has been recovered.";
-
-            uReward.classList.remove("hidden");
-
-            confirmBtn.disabled = true;
-
-            confirmBtn.style.opacity = "0.5";
-
-
-            choices.forEach(button => {
-                button.disabled = true;
-            });
-
-
-        } else {
-
-            uMessage.textContent =
-                "Something doesn't belong in this file. Try again.";
-
-        }
-
-    });
+                choices.forEach(button => {
+                    button.disabled = true;
+                });
+            } else {
+                if (uMessage) uMessage.textContent = "Something doesn't belong in this file. Try again.";
+            }
+        });
+    }
 
 
     /* ==================================================
-       PASSPORT
+        PASSPORT
     ================================================== */
 
-    const passportBtn =
-        document.getElementById("passportBtn");
+    const passportBtn = document.getElementById("passportBtn");
 
-
-    passportBtn.addEventListener("click", () => {
-
-        showPage("passport");
-
-    });
+    if (passportBtn) {
+        passportBtn.addEventListener("click", () => {
+            showPage("passport");
+        });
+    }
 
 });
