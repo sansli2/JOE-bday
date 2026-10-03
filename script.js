@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const opening = document.getElementById("opening");
     const archive = document.getElementById("archive");
-    const beginBtn = document.getElementById("beginBtn");
+    const beginBtn = document.getElementById("openInvitation");
 
 
     /* ==================================================
