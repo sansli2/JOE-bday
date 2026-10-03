@@ -1,4 +1,4 @@
- @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=IM+Fell+English:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=IM+Fell+English:ital@0;1&display=swap');
 
 * {
     box-sizing: border-box;
@@ -26,31 +26,37 @@ button {
     cursor: pointer;
 }
 
+
 /* =========================
    OPENING
 ========================= */
 
 #opening {
     min-height: 100vh;
-    position: relative;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    position: relative;
 
     background:
         linear-gradient(
             rgba(10, 15, 11, .45),
             rgba(10, 15, 11, .72)
         ),
-        url("images/chosen.jpg") center / cover no-repeat;
+        url("chosen.jpg") center / cover no-repeat;
+
+    padding: 30px;
 }
+
 
 .opening-content {
     position: relative;
     z-index: 2;
 
     width: min(90%, 720px);
+
     padding: 60px 35px;
 
     text-align: center;
@@ -63,46 +69,65 @@ button {
         0 20px 60px rgba(0,0,0,.6);
 }
 
+
 .eyebrow {
     color: #bd9b59;
+
     letter-spacing: 5px;
+
     text-transform: uppercase;
+
     font-size: .75rem;
+
     margin-bottom: 20px;
 }
 
+
 .opening-content h1 {
     font-family: "IM Fell English", serif;
+
     font-size: clamp(3rem, 9vw, 6.5rem);
+
     font-weight: 400;
+
     color: #eadbb9;
+
     margin-bottom: 25px;
 }
 
+
 .opening-content p {
     font-size: 1.25rem;
+
     line-height: 1.7;
 }
 
+
 .gold-btn {
     margin-top: 28px;
+
     padding: 13px 25px;
 
     background: transparent;
+
     border: 1px solid #bd9b59;
 
     color: #d9bd7d;
 
     letter-spacing: 2px;
+
     text-transform: uppercase;
 
     transition: .3s ease;
 }
 
+
 .gold-btn:hover {
     background: #bd9b59;
+
     color: #11160f;
 }
+
 
 /* =========================
    ARCHIVE
@@ -118,27 +143,38 @@ button {
             rgba(12,18,13,.86),
             rgba(12,18,13,.93)
         ),
-        url("images/explorer-map.jpg") center / cover fixed;
+        url("explorer-map.jpg") center / cover fixed;
 }
+
 
 .archive-header {
     text-align: center;
+
     max-width: 900px;
+
     margin: 0 auto 45px;
 }
 
+
 .archive-header h2 {
     font-family: "IM Fell English", serif;
+
     font-size: clamp(2.3rem, 6vw, 4.5rem);
+
     font-weight: 400;
+
     color: #eadbb9;
+
     margin-bottom: 12px;
 }
 
+
 .archive-header p:last-child {
     color: #c6baa0;
+
     font-size: 1.15rem;
 }
+
 
 /* =========================
    PAGES
@@ -146,10 +182,12 @@ button {
 
 .archive-page {
     max-width: 900px;
+
     margin: 0 auto 60px;
 
     animation: reveal .7s ease;
 }
+
 
 .paper {
     position: relative;
@@ -163,7 +201,7 @@ button {
             rgba(235,220,184,.94),
             rgba(219,199,158,.94)
         ),
-        url("images/vintage-archive.jpg") center / cover;
+        url("vintage-archive.jpg") center / cover;
 
     border: 1px solid #96794b;
 
@@ -171,16 +209,19 @@ button {
         0 20px 50px rgba(0,0,0,.45);
 }
 
+
 .paper::before {
     content: "";
 
     position: absolute;
+
     inset: 12px;
 
     border: 1px solid rgba(93,72,40,.35);
 
     pointer-events: none;
 }
+
 
 .file-label {
     display: inline-block;
@@ -192,10 +233,12 @@ button {
     color: #654b2c;
 
     letter-spacing: 3px;
+
     font-size: .7rem;
 
     margin-bottom: 20px;
 }
+
 
 .paper h2 {
     font-family: "IM Fell English", serif;
@@ -207,18 +250,38 @@ button {
     margin-bottom: 25px;
 }
 
+
 .paper p {
     font-size: 1.15rem;
+
     line-height: 1.8;
+
     margin-bottom: 18px;
 }
+
+
+.highlight {
+    font-family: "IM Fell English", serif;
+
+    font-size: 2rem !important;
+
+    letter-spacing: 8px;
+
+    text-align: center;
+
+    color: #76552c;
+}
+
 
 /* =========================
    IMAGES
 ========================= */
 
 .archive-image {
+    display: block;
+
     width: 100%;
+
     max-height: 700px;
 
     object-fit: contain;
@@ -230,7 +293,6 @@ button {
     box-shadow:
         0 12px 25px rgba(0,0,0,.28);
 }
-
 /* =========================
    STORY / PUZZLES
 ========================= */
@@ -245,13 +307,16 @@ button {
 
     background: rgba(112,82,42,.08);
 }
- .story-box h3 {
+
+
+.story-box h3 {
     font-family: "IM Fell English", serif;
 
     font-size: 1.6rem;
 
     margin-bottom: 12px;
 }
+
 
 .puzzle-buttons {
     display: flex;
@@ -263,9 +328,9 @@ button {
     margin: 20px 0;
 }
 
+
 .puzzle-buttons button,
 .choice-grid button {
-
     padding: 11px 17px;
 
     background: transparent;
@@ -277,17 +342,21 @@ button {
     transition: .25s;
 }
 
+
 .puzzle-buttons button:hover,
 .choice-grid button:hover {
-
     background: #765a37;
+
     color: #f0dfb8;
 }
+
 
 .puzzle-buttons button.selected {
     background: #765a37;
+
     color: #f0dfb8;
 }
+
 
 .puzzle-message {
     min-height: 28px;
@@ -297,14 +366,17 @@ button {
     font-weight: 600;
 }
 
+
 .reward {
     margin-top: 30px;
 
     padding: 25px;
 
     border-top: 1px solid #8a6a3c;
+
     border-bottom: 1px solid #8a6a3c;
 }
+
 
 .reward h3 {
     font-family: "IM Fell English", serif;
@@ -313,6 +385,7 @@ button {
 
     margin-bottom: 12px;
 }
+
 
 /* =========================
    U CHOICES
@@ -329,6 +402,7 @@ button {
     margin: 20px 0;
 }
 
+
 .choice-grid button.selected {
     background: #765a37;
 
@@ -337,11 +411,13 @@ button {
     transform: translateY(-2px);
 }
 
+
 #uCounter {
     font-weight: 600;
 
     color: #6a4d2d;
 }
+
 
 .love-message {
     font-family: "IM Fell English", serif;
@@ -353,6 +429,7 @@ button {
     margin: 25px 0;
 }
 
+
 .lum {
     text-align: center;
 
@@ -363,6 +440,7 @@ button {
     font-size: 1.5rem !important;
 }
 
+
 /* =========================
    ARSU
 ========================= */
@@ -370,6 +448,7 @@ button {
 .center {
     text-align: center;
 }
+
 
 .letters {
     display: flex;
@@ -381,13 +460,16 @@ button {
     margin: 30px 0;
 }
 
+
 .letters span {
     width: 65px;
+
     height: 65px;
 
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     border: 1px solid #80623b;
@@ -398,6 +480,7 @@ button {
 
     color: #76552c;
 }
+
 
 .arsu-title {
     font-family: "IM Fell English", serif;
@@ -410,6 +493,7 @@ button {
 
     margin: 15px 0;
 }
+
 
 /* =========================
    PASSPORT
@@ -427,6 +511,7 @@ button {
     color: #e4d7ba;
 }
 
+
 .passport-page h2 {
     font-family: "IM Fell English", serif;
 
@@ -437,7 +522,10 @@ button {
     margin-bottom: 30px;
 }
 
+
 .passport-image {
+    display: block;
+
     width: 100%;
 
     max-width: 800px;
@@ -449,6 +537,7 @@ button {
     box-shadow:
         0 20px 60px rgba(0,0,0,.7);
 }
+
 
 .passport-code {
     font-family: "IM Fell English", serif;
@@ -462,6 +551,7 @@ button {
     margin-top: 35px;
 }
 
+
 .mystery-text {
     max-width: 600px;
 
@@ -472,6 +562,7 @@ button {
     font-size: 1.2rem;
 }
 
+
 .final-whisper {
     color: #a99675;
 
@@ -479,6 +570,7 @@ button {
 
     margin-top: 40px;
 }
+
 
 /* =========================
    ANIMATION
@@ -488,14 +580,18 @@ button {
 
     from {
         opacity: 0;
+
         transform: translateY(20px);
     }
 
     to {
         opacity: 1;
+
         transform: translateY(0);
     }
+
 }
+
 
 /* =========================
    MOBILE
@@ -517,10 +613,12 @@ button {
 
     .letters span {
         width: 55px;
+
         height: 55px;
     }
 
     .arsu-title {
         letter-spacing: 5px;
     }
+
 }
