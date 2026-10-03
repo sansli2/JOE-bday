@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,9 +15,7 @@
      OPENING
 ================================================== -->
 
-<section id="opening" class="screen">
-
-    <div class="opening-overlay"></div>
+<section id="opening">
 
     <div class="opening-content">
 
@@ -40,10 +38,10 @@
 
 
 <!-- ==================================================
-     MAIN ARCHIVE
+     ARCHIVE
 ================================================== -->
 
-<section id="archive" class="hidden">
+<main id="archive" class="hidden">
 
     <header class="archive-header">
 
@@ -52,612 +50,472 @@
         <h2>THE ARSU INVESTIGATION</h2>
 
         <p>
-            Four memories have been hidden inside the archive.
+            Memories have been hidden inside the archive.
         </p>
 
     </header>
 
 
-    <!-- ==================================================
-         INTRO
-    ================================================== -->
+<!-- ==================================================
+     INTRO
+================================================== -->
 
-    <section id="intro" class="archive-page">
+<section id="intro" class="archive-page">
 
-        <div class="paper">
+    <div class="paper">
 
-            <span class="file-label">ARCHIVE FILE 003</span>
+        <span class="file-label">ARCHIVE FILE 003</span>
 
-            <h2>The Mysterious Invitation</h2>
+        <h2>The Mysterious Invitation</h2>
 
-            <img
-                src="images/travel-desk.jpg"
-                class="archive-image"
-                alt="Vintage travel desk"
-            >
+        <img
+            src="travel-desk.jpg"
+            class="archive-image"
+            alt="Vintage travel desk"
+        >
 
-            <p>
-                Somewhere between memories, coincidences,
-                and places we never planned to find...
-            </p>
+        <p>
+            Somewhere between memories, coincidences,
+            and places we never planned to find...
+        </p>
 
-            <p>
-                Four letters have been hidden.
-            </p>
+        <p>
+            Four letters have been hidden.
+        </p>
 
-            <p class="highlight">
-                A · R · S · U
-            </p>
+        <p class="highlight">
+            A · R · S · U
+        </p>
 
-            <p>
-                Recover them in order.
-            </p>
+        <p>
+            Recover them in order.
+        </p>
 
-            <button class="gold-btn next-btn" data-next="memoryA">
-                BEGIN THE INVESTIGATION →
-            </button>
+        <button class="gold-btn next-btn" data-next="memoryA">
+            BEGIN THE INVESTIGATION →
+        </button>
 
-        </div>
-
-    </section>
-
-
-    <!-- ==================================================
-         A — ORIGIN STORY
-    ================================================== -->
-
-    <section id="memoryA" class="archive-page hidden">
-
-        <div class="paper">
-
-            <span class="file-label">ARCHIVE 001</span>
-
-            <h2>THE ORIGIN STORY</h2>
-
-            <img
-                src="images/A.jpg"
-                class="archive-image"
-                alt="Archive A"
-            >
-
-            <p>
-                Before all this, we were just two people
-                who happened to know of each other.
-            </p>
-
-            <div class="story-box">
-
-                <h3>THE FIRST CLUE</h3>
-
-                <p>
-                    Put the events in the order they actually happened.
-                </p>
-
-                <div id="aPuzzle" class="puzzle-buttons">
-
-                    <button data-answer="grade">GRADE 12</button>
-
-                    <button data-answer="university">SAME UNIVERSITY</button>
-
-                    <button data-answer="exam">ENTRANCE EXAM / DORM</button>
-
-                </div>
-
-                <p id="aMessage" class="puzzle-message"></p>
-
-            </div>
-
-            <div id="aReward" class="reward hidden">
-
-                <h3>A RECOVERED</h3>
-
-                <p>
-                    Grade 12 → Entrance Exam / Dorm →
-                    Same University.
-                </p>
-
-                <p>
-                    And somewhere in that chaos...
-                    I discovered that Jo sleeps like a baby. 😂
-                </p>
-
-                <button class="gold-btn next-btn" data-next="memoryR">
-                    RECOVER R →
-                </button>
-
-            </div>
-
-        </div>
-
-    </section>
- <!-- ==================================================
-         R — RAINY SAMBUSA
-    ================================================== -->
-
-    <section id="memoryR" class="archive-page hidden">
-
-        <div class="paper">
-
-            <span class="file-label">ARCHIVE 002</span>
-
-            <h2>THE RAINY SAMBUSA FILE</h2>
-
-            <img
-                src="images/R.jpg"
-                class="archive-image"
-                alt="Archive R"
-            >
-
-            <p>
-                This memory is hidden somewhere between
-                a journey, a rainy night, and something we
-                wanted to eat.
-            </p>
-
-            <div class="story-box">
-
-                <h3>FOLLOW THE JOURNEY</h3>
-
-                <p>
-                    Recover the locations in the correct order.
-                </p>
-
-                <div id="rPuzzle" class="puzzle-buttons">
-
-                    <button data-answer="qoqor">QOQOR</button>
-
-                    <button data-answer="unisa">UNISA</button>
-
-                    <button data-answer="nowhere">NOWHERE</button>
-
-                    <button data-answer="sambusa">SAMBUSA</button>
-
-                    <button data-answer="rain">RAINY NIGHT</button>
-
-                </div>
-
-                <p id="rMessage" class="puzzle-message"></p>
-
-            </div>
-
-            <div id="rReward" class="reward hidden">
-
-                <h3>R RECOVERED</h3>
-
-                <p>
-                    It was raining.
-                    We wanted to eat qoqor... kinda thing. 😂
-                </p>
-
-                <button class="gold-btn next-btn" data-next="memoryS">
-                    RECOVER S →
-                </button>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ==================================================
-         S — JO
-    ================================================== -->
-
-    <section id="memoryS" class="archive-page hidden">
-
-        <div class="paper">
-
-            <span class="file-label">ARCHIVE 003</span>
-
-            <h2>THE GIRL BEHIND THE FILE</h2>
-
-            <img
-                src="images/S.jpg"
-                class="archive-image"
-                alt="Archive S"
-            >
-
-            <p>
-                The archive isn't really about a place.
-            </p>
-
-            <p>
-                It's about a person.
-            </p>
-
-            <div class="story-box">
-
-                <h3>THE SUBJECT</h3>
-
-                <p>
-                    Her personality, dreams, interests,
-                    little obsessions, and the things
-                    that make her... her.
-                </p>
-
-                <p>
-                    Lilies. Food. Travel. Vintage things.
-                    Events. Dreams. Memories.
-                </p>
-
-                <p class="handwritten">
-                    Some people become memories.
-                    Some people become stories.
-                </p>
-
-                <button id="sRevealBtn" class="gold-btn">
-                    RECOVER S
-                </button>
-
-                <p id="sMessage" class="puzzle-message"></p>
-
-            </div>
-
-            <div id="sReward" class="reward hidden">
-
-                <h3>S RECOVERED</h3>
-
-                <p>
-                    The third letter has been found.
-                </p>
-
-                <button class="gold-btn next-btn" data-next="memoryU">
-                    RECOVER U →
-                </button>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ==================================================
-         U — CHOOSE THREE
-    ================================================== -->
-
-    <section id="memoryU" class="archive-page hidden">
-
-        <div class="paper">
-
-            <span class="file-label">ARCHIVE 004</span>
-
-            <h2>THE GIRL BEHIND IT ALL</h2>
-
-            <img
-                src="images/U.jpg"
-                class="archive-image"
-                alt="Archive U"
-            >
-
-            <p>
-                There are many things that make her special.
-            </p>
- <p>
-                But this part of the archive asks for
-                something very specific.
-            </p>
-
-            <div class="story-box">
-
-                <h3>CHOOSE THREE</h3>
-
-                <p>
-                    Choose the three things that belong
-                    to her story.
-                </p>
-
-                <div id="uChoices" class="choice-grid">
-
-                    <button data-choice="food">FOOD</button>
-
-                    <button data-choice="vintage">VINTAGE</button>
-
-                    <button data-choice="travel">TRAVEL</button>
-
-                    <button data-choice="flowers">FLOWERS</button>
-
-                    <button data-choice="music">MUSIC</button>
-
-                    <button data-choice="fashion">FASHION</button>
-
-                </div>
-
-                <p id="uCounter">
-                    0 / 3 selected
-                </p>
-
-                <button id="uConfirm" class="gold-btn">
-                    CONFIRM MY CHOICES
-                </button>
-
-                <p id="uMessage" class="puzzle-message"></p>
-
-            </div>
-
-            <div id="uReward" class="reward hidden">
-
-                <h3>U RECOVERED</h3>
-
-                <p>
-                    Food. Vintage. Travel.
-                </p>
-
-                <p class="love-message">
-                    I love u so much,
-                    and you are the most beautiful person
-                    in and out.
-                </p>
-
-                <p class="lum">
-                    LUM — LIGHT ✦
-                </p>
-
-                <button class="gold-btn next-btn" data-next="discovery">
-                    PUT THE FOUR LETTERS TOGETHER →
-                </button>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ==================================================
-         ARSU DISCOVERY
-    ================================================== -->
-
-    <section id="discovery" class="archive-page hidden">
-
-        <div class="paper center">
-
-            <span class="file-label">FINAL DISCOVERY</span>
-
-            <h2>THE FOUR LETTERS</h2>
-
-            <img
-                src="images/arsu-map.jpg"
-                class="archive-image"
-                alt="ARSU discovery map"
-            >
-
-            <p>
-                Four memories.
-                Four recovered letters.
-            </p>
-
-            <div class="letters">
-
-                <span>A</span>
-                <span>R</span>
-                <span>S</span>
-                <span>U</span>
-
-            </div>
-
-            <p>
-                Put them together.
-            </p>
-
-            <h1 class="arsu-title">
-                ARSU
-            </h1>
-
-            <button id="passportBtn" class="gold-btn">
-                OPEN THE FINAL FILE →
-            </button>
-
-        </div>
-
-    </section>
-
-
-    <!-- ==================================================
-         PASSPORT
-    ================================================== -->
-
-    <section id="passport" class="archive-page hidden">
-
-        <div class="passport-page">
-
-            <span class="file-label">CLASSIFIED PASSPORT</span>
-
-            <h2>THE FINAL FILE</h2>
-
-            <img
-                src="images/passport.jpg"
-                class="passport-image"
-                alt="Vintage passport"
-            >
-
-            <div class="passport-code">
-                ARSU____
-            </div>
-
-            <p class="mystery-text">
-                Some journeys are meant to be discovered
-                one day at a time.
-            </p>
-
-            <p class="final-whisper">
-                The archive ends here...
-                for now.
-            </p>
-
-        </div>
-
-    </section>
+    </div>
 
 </section>
+
+
+<!-- ==================================================
+     A — ORIGIN STORY
+================================================== -->
+
+<section id="memoryA" class="archive-page hidden">
+
+    <div class="paper">
+
+        <span class="file-label">ARCHIVE 001</span>
+
+        <h2>THE ORIGIN STORY</h2>
+
+        <img
+            src="A.jpg"
+            class="archive-image"
+            alt="Archive A"
+        >
+
+        <p>
+            Before all this, we were just two people
+            who happened to know of each other.
+        </p>
+
+        <div class="story-box">
+
+            <h3>THE FIRST CLUE</h3>
+
+            <p>
+                Put the events in the order they actually happened.
+            </p>
+
+            <div id="aPuzzle" class="puzzle-buttons">
+
+                <button data-answer="grade">
+                    GRADE 12
+                </button>
+
+                <button data-answer="university">
+                    SAME UNIVERSITY
+                </button>
+
+                <button data-answer="exam">
+                    ENTRANCE EXAM / DORM
+                </button>
+
+            </div>
+
+            <p id="aMessage" class="puzzle-message"></p>
+
+        </div>
+
+
+        <div id="aReward" class="reward hidden">
+
+            <h3>A RECOVERED</h3>
+
+            <p>
+                Grade 12 → Entrance Exam / Dorm →
+                Same University.
+            </p>
+
+            <button class="gold-btn next-btn" data-next="memoryR">
+                RECOVER R →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     R — RAINY SAMBUSA
+================================================== -->
+
+<section id="memoryR" class="archive-page hidden">
+
+    <div class="paper">
+
+        <span class="file-label">ARCHIVE 002</span>
+
+        <h2>THE RAINY SAMBUSA FILE</h2>
+
+        <img
+            src="R.jpg"
+            class="archive-image"
+            alt="Archive R"
+        >
+        <p>
+            This memory is hidden somewhere between
+            a journey, a rainy night, and something we
+            wanted to eat.
+        </p>
+
+        <div class="story-box">
+
+            <h3>FOLLOW THE JOURNEY</h3>
+
+            <p>
+                Recover the locations in the correct order.
+            </p>
+
+            <div id="rPuzzle" class="puzzle-buttons">
+
+                <button data-answer="qoqor">
+                    QOQOR
+                </button>
+
+                <button data-answer="unisa">
+                    UNISA
+                </button>
+
+                <button data-answer="nowhere">
+                    NOWHERE
+                </button>
+
+                <button data-answer="sambusa">
+                    SAMBUSA
+                </button>
+
+                <button data-answer="rain">
+                    RAINY NIGHT
+                </button>
+
+            </div>
+
+            <p id="rMessage" class="puzzle-message"></p>
+
+        </div>
+
+
+        <div id="rReward" class="reward hidden">
+
+            <h3>R RECOVERED</h3>
+
+            <p>
+                It was raining.
+                We wanted to eat qoqor... kinda thing. 😂
+            </p>
+
+            <button class="gold-btn next-btn" data-next="memoryS">
+                RECOVER S →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     S — JO
+================================================== -->
+
+<section id="memoryS" class="archive-page hidden">
+
+    <div class="paper">
+
+        <span class="file-label">ARCHIVE 003</span>
+
+        <h2>THE GIRL BEHIND THE FILE</h2>
+
+        <img
+            src="S.jpg"
+            class="archive-image"
+            alt="Archive S"
+        >
+
+        <p>
+            The archive isn't really about a place.
+        </p>
+
+        <p>
+            It's about a person.
+        </p>
+
+        <div class="story-box">
+
+            <h3>THE SUBJECT</h3>
+
+            <p>
+                Her personality, dreams, interests,
+                little obsessions, and the things
+                that make her... her.
+            </p>
+
+            <p>
+                Lilies. Food. Travel. Vintage things.
+                Events. Dreams. Memories.
+            </p>
+
+            <p class="handwritten">
+                Some people become memories.
+                Some people become stories.
+            </p>
+
+            <button id="sRevealBtn" class="gold-btn">
+                RECOVER S
+            </button>
+
+            <p id="sMessage" class="puzzle-message"></p>
+
+        </div>
+
+
+        <div id="sReward" class="reward hidden">
+
+            <h3>S RECOVERED</h3>
+
+            <p>
+                The third letter has been found.
+            </p>
+
+            <button class="gold-btn next-btn" data-next="memoryU">
+                RECOVER U →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     U — CHOOSE THREE
+================================================== -->
+
+<section id="memoryU" class="archive-page hidden">
+
+    <div class="paper">
+
+        <span class="file-label">ARCHIVE 004</span>
+
+        <h2>THE GIRL BEHIND IT ALL</h2>
+
+        <img
+            src="U.jpg"
+            class="archive-image"
+            alt="Archive U"
+        >
+
+        <p>
+            There are many things that make her special.
+        </p>
+
+
+        <div class="story-box">
+
+            <h3>CHOOSE THREE</h3>
+
+            <p>
+                Choose the three things that belong
+                to her story.
+            </p>
+
+            <div id="uChoices" class="choice-grid">
+
+                <button data-choice="food">
+                    FOOD
+                </button>
+
+                <button data-choice="vintage">
+                    VINTAGE
+                </button>
+
+                <button data-choice="travel">
+                    TRAVEL
+                </button>
+
+                <button data-choice="flowers">
+                    FLOWERS
+                </button>
+                <button data-choice="music">
+                    MUSIC
+                </button>
+
+                <button data-choice="fashion">
+                    FASHION
+                </button>
+
+            </div>
+
+            <p id="uCounter">
+                0 / 3 selected
+            </p>
+
+            <button id="uConfirm" class="gold-btn">
+                CONFIRM MY CHOICES
+            </button>
+
+            <p id="uMessage" class="puzzle-message"></p>
+
+        </div>
+
+
+        <div id="uReward" class="reward hidden">
+
+            <h3>U RECOVERED</h3>
+
+            <p>
+                Food. Vintage. Travel.
+            </p>
+
+            <p class="love-message">
+                I love u so much,
+                and you are the most beautiful person
+                in and out.
+            </p>
+
+            <p class="lum">
+                LUM — LIGHT ✦
+            </p>
+
+            <button class="gold-btn next-btn" data-next="discovery">
+                PUT THE FOUR LETTERS TOGETHER →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     ARSU DISCOVERY
+================================================== -->
+
+<section id="discovery" class="archive-page hidden">
+
+    <div class="paper center">
+
+        <span class="file-label">FINAL DISCOVERY</span>
+
+        <h2>THE FOUR LETTERS</h2>
+
+        <img
+            src="arsu-map.jpg"
+            class="archive-image"
+            alt="ARSU discovery map"
+        >
+
+        <p>
+            Four memories.
+            Four recovered letters.
+        </p>
+
+        <div class="letters">
+
+            <span>A</span>
+            <span>R</span>
+            <span>S</span>
+            <span>U</span>
+
+        </div>
+
+        <p>
+            Put them together.
+        </p>
+
+        <h1 class="arsu-title">
+            ARSU
+        </h1>
+
+        <button id="passportBtn" class="gold-btn">
+            OPEN THE FINAL FILE →
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     PASSPORT
+================================================== -->
+
+<section id="passport" class="archive-page hidden">
+
+    <div class="passport-page">
+
+        <span class="file-label">CLASSIFIED PASSPORT</span>
+
+        <h2>THE FINAL FILE</h2>
+
+        <img
+            src="passport.jpg"
+            class="passport-image"
+            alt="Vintage passport"
+        >
+
+        <div class="passport-code">
+            ARSU____
+        </div>
+
+        <p class="mystery-text">
+            Some journeys are meant to be discovered
+            one day at a time.
+        </p>
+
+        <p class="final-whisper">
+            The archive ends here...
+            for now.
+        </p>
+
+    </div>
+
+</section>
+
+</main>
 
 
 <script src="script.js"></script>
 
 </body>
 </html>
- <!-- ==================================================
-         R — RAINY SAMBUSA
-    ================================================== -->
-
-    <section id="memoryR" class="archive-page hidden">
-
-        <div class="paper">
-
-            <span class="file-label">ARCHIVE 002</span>
-
-            <h2>THE RAINY SAMBUSA FILE</h2>
-
-            <img
-                src="images/R.jpg"
-                class="archive-image"
-                alt="Archive R"
-            >
-
-            <p>
-                This memory is hidden somewhere between
-                a journey, a rainy night, and something we
-                wanted to eat.
-            </p>
-
-            <div class="story-box">
-
-                <h3>FOLLOW THE JOURNEY</h3>
-
-                <p>
-                    Recover the locations in the correct order.
-                </p>
-
-                <div id="rPuzzle" class="puzzle-buttons">
-
-                    <button data-answer="qoqor">QOQOR</button>
-
-                    <button data-answer="unisa">UNISA</button>
-
-                    <button data-answer="nowhere">NOWHERE</button>
-
-                    <button data-answer="sambusa">SAMBUSA</button>
-
-                    <button data-answer="rain">RAINY NIGHT</button>
-
-                </div>
-
-                <p id="rMessage" class="puzzle-message"></p>
-
-            </div>
-
-            <div id="rReward" class="reward hidden">
-
-                <h3>R RECOVERED</h3>
-
-                <p>
-                    It was raining.
-                    We wanted to eat qoqor... kinda thing. 😂
-                </p>
-
-                <button class="gold-btn next-btn" data-next="memoryS">
-                    RECOVER S →
-                </button>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ==================================================
-         S — JO
-    ================================================== -->
-
-    <section id="memoryS" class="archive-page hidden">
-
-        <div class="paper">
-
-            <span class="file-label">ARCHIVE 003</span>
-
-            <h2>THE GIRL BEHIND THE FILE</h2>
-
-            <img
-                src="images/S.jpg"
-                class="archive-image"
-                alt="Archive S"
-            >
-
-            <p>
-                The archive isn't really about a place.
-            </p>
-
-            <p>
-                It's about a person.
-            </p>
-
-            <div class="story-box">
-
-                <h3>THE SUBJECT</h3>
-
-                <p>
-                    Her personality, dreams, interests,
-                    little obsessions, and the things
-                    that make her... her.
-                </p>
-
-                <p>
-                    Lilies. Food. Travel. Vintage things.
-                    Events. Dreams. Memories.
-                </p>
-
-                <p class="handwritten">
-                    Some people become memories.
-                    Some people become stories.
-                </p>
-
-                <button id="sRevealBtn" class="gold-btn">
-                    RECOVER S
-                </button>
-
-                <p id="sMessage" class="puzzle-message"></p>
-
-            </div>
-
-            <div id="sReward" class="reward hidden">
-
-                <h3>S RECOVERED</h3>
-
-                <p>
-                    The third letter has been found.
-                </p>
-
-                <button class="gold-btn next-btn" data-next="memoryU">
-                    RECOVER U →
-                </button>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ==================================================
-         U — CHOOSE THREE
-    ================================================== -->
-
-    <section id="memoryU" class="archive-page hidden">
-
-        <div class="paper">
-
-            <span class="file-label">ARCHIVE 004</span>
-
-            <h2>THE GIRL BEHIND IT ALL</h2>
-
-            <img
-                src="images/U.jpg"
-                class="archive-image"
-                alt="Archive U"
-            >
-
-            <p>
-                There are many things that make her special.
-            </p>
