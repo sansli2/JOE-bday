@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const archive = document.getElementById("archive");
     const beginBtn = document.getElementById("beginBtn");
 
+
     /* ==================================================
        OPEN ARCHIVE
     ================================================== */
@@ -15,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     beginBtn.addEventListener("click", () => {
 
         opening.classList.add("hidden");
+
         archive.classList.remove("hidden");
 
         showPage("intro");
@@ -28,13 +30,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function showPage(id) {
 
-        const pages = document.querySelectorAll(".archive-page");
+        const pages =
+            document.querySelectorAll(".archive-page");
 
         pages.forEach(page => {
             page.classList.add("hidden");
         });
 
-        const page = document.getElementById(id);
+
+        const page =
+            document.getElementById(id);
+
 
         if (page) {
 
@@ -58,7 +64,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         button.addEventListener("click", () => {
 
-            const nextPage = button.dataset.next;
+            const nextPage =
+                button.dataset.next;
 
             showPage(nextPage);
 
@@ -69,8 +76,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* ==================================================
        A PUZZLE
+
        Correct order:
-       Grade 12 → Entrance Exam/Dorm → University
+       Grade 12
+       → Entrance Exam / Dorm
+       → Same University
     ================================================== */
 
     const aButtons =
@@ -90,17 +100,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let aStep = 0;
 
+
     aButtons.forEach(button => {
 
         button.addEventListener("click", () => {
 
-            const answer = button.dataset.answer;
+            const answer =
+                button.dataset.answer;
+
 
             if (answer === aCorrectOrder[aStep]) {
 
                 button.classList.add("selected");
 
                 aStep++;
+
 
                 if (aStep === aCorrectOrder.length) {
 
@@ -116,12 +130,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 }
 
+
             } else {
 
                 aMessage.textContent =
                     "✕ That isn't the next event. Try again.";
 
                 aStep = 0;
+
 
                 aButtons.forEach(btn => {
                     btn.classList.remove("selected");
@@ -136,8 +152,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* ==================================================
        R PUZZLE
+
        Correct order:
-       Qoqor → Unisa → Nowhere → Sambusa → Rainy Night
+       Qoqor
+       → Unisa
+       → Nowhere
+       → Sambusa
+       → Rainy Night
     ================================================== */
 
     const rButtons =
@@ -159,23 +180,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let rStep = 0;
 
+
     rButtons.forEach(button => {
 
         button.addEventListener("click", () => {
 
-            const answer = button.dataset.answer;
+            const answer =
+                button.dataset.answer;
+
 
             if (answer === rCorrectOrder[rStep]) {
 
                 button.classList.add("selected");
 
                 rStep++;
-
-                if (rStep === rCorrectOrder.length) {
+               if (rStep === rCorrectOrder.length) {
 
                     rMessage.textContent =
                         "✓ Journey reconstructed. Archive R recovered.";
- rReward.classList.remove("hidden");
+
+                    rReward.classList.remove("hidden");
 
                 } else {
 
@@ -184,12 +208,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 }
 
+
             } else {
 
                 rMessage.textContent =
                     "✕ Wrong path. Start the journey again.";
 
                 rStep = 0;
+
 
                 rButtons.forEach(btn => {
                     btn.classList.remove("selected");
@@ -214,6 +240,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const sMessage =
         document.getElementById("sMessage");
+
 
     sRevealBtn.addEventListener("click", () => {
 
@@ -248,7 +275,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const uReward =
         document.getElementById("uReward");
 
+
     let selectedChoices = [];
+
 
     const correctChoices = [
         "food",
@@ -261,7 +290,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         button.addEventListener("click", () => {
 
-            const choice = button.dataset.choice;
+            const choice =
+                button.dataset.choice;
+
 
             if (selectedChoices.includes(choice)) {
 
@@ -271,6 +302,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     );
 
                 button.classList.remove("selected");
+
 
             } else {
 
@@ -282,11 +314,13 @@ document.addEventListener("DOMContentLoaded", () => {
                     return;
                 }
 
+
                 selectedChoices.push(choice);
 
                 button.classList.add("selected");
 
             }
+
 
             counter.textContent =
                 ${selectedChoices.length} / 3 selected;
@@ -309,10 +343,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         }
 
+
         const isCorrect =
             correctChoices.every(
-                choice => selectedChoices.includes(choice)
+                choice =>
+                    selectedChoices.includes(choice)
             );
+
 
         if (isCorrect) {
 
@@ -325,9 +362,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
             confirmBtn.style.opacity = "0.5";
 
+
             choices.forEach(button => {
                 button.disabled = true;
             });
+
 
         } else {
 
@@ -345,6 +384,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const passportBtn =
         document.getElementById("passportBtn");
+
 
     passportBtn.addEventListener("click", () => {
 
